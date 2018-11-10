@@ -39,10 +39,10 @@
             this.lblPrenom = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbExistant = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnInscrire = new System.Windows.Forms.Button();
             this.cmbCategorie = new System.Windows.Forms.ComboBox();
             this.lblCat = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGroupe = new System.Windows.Forms.TextBox();
             this.lblNomDuGroupe = new System.Windows.Forms.Label();
             this.lblCourriel = new System.Windows.Forms.Label();
             this.txtCourriel = new System.Windows.Forms.TextBox();
@@ -140,14 +140,15 @@
             this.cmbExistant.Size = new System.Drawing.Size(247, 21);
             this.cmbExistant.TabIndex = 10;
             // 
-            // button1
+            // btnInscrire
             // 
-            this.button1.Location = new System.Drawing.Point(585, 252);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 40);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "S\'inscrire";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnInscrire.Location = new System.Drawing.Point(585, 252);
+            this.btnInscrire.Name = "btnInscrire";
+            this.btnInscrire.Size = new System.Drawing.Size(125, 40);
+            this.btnInscrire.TabIndex = 11;
+            this.btnInscrire.Text = "S\'inscrire";
+            this.btnInscrire.UseVisualStyleBackColor = true;
+            this.btnInscrire.Click += new System.EventHandler(this.btnInscrire_Click);
             // 
             // cmbCategorie
             // 
@@ -166,12 +167,12 @@
             this.lblCat.TabIndex = 13;
             this.lblCat.Text = "Catégorie";
             // 
-            // textBox2
+            // txtGroupe
             // 
-            this.textBox2.Location = new System.Drawing.Point(300, 165);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 20);
-            this.textBox2.TabIndex = 14;
+            this.txtGroupe.Location = new System.Drawing.Point(300, 165);
+            this.txtGroupe.Name = "txtGroupe";
+            this.txtGroupe.Size = new System.Drawing.Size(247, 20);
+            this.txtGroupe.TabIndex = 14;
             // 
             // lblNomDuGroupe
             // 
@@ -206,10 +207,10 @@
             this.Controls.Add(this.txtCourriel);
             this.Controls.Add(this.lblCourriel);
             this.Controls.Add(this.lblNomDuGroupe);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtGroupe);
             this.Controls.Add(this.lblCat);
             this.Controls.Add(this.cmbCategorie);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnInscrire);
             this.Controls.Add(this.cmbExistant);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblPrenom);
@@ -239,13 +240,13 @@
         private System.Windows.Forms.Label lblPrenom;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbExistant;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInscrire;
         private System.Windows.Forms.ComboBox cmbCategorie;
         private System.Windows.Forms.Label lblCat;
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGroupe;
         private System.Windows.Forms.Label lblNomDuGroupe;
         private System.Windows.Forms.Label lblCourriel;
         private System.Windows.Forms.TextBox txtCourriel;
