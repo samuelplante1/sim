@@ -83,6 +83,7 @@
             this.cboMateriel1.Name = "cboMateriel1";
             this.cboMateriel1.Size = new System.Drawing.Size(204, 21);
             this.cboMateriel1.TabIndex = 3;
+            this.cboMateriel1.SelectedIndexChanged += new System.EventHandler(this.cboMateriel1_SelectedIndexChanged);
             // 
             // label1
             // 

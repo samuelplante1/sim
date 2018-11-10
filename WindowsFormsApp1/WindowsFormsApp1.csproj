@@ -58,6 +58,7 @@
     <Compile Include="FrmMateriel.Designer.cs">
       <DependentUpon>FrmMateriel.cs</DependentUpon>
     </Compile>
+    <Compile Include="materiel.cs" />
     <Compile Include="Participant.cs" />
     <Compile Include="Personne.cs" />
     <Compile Include="Program.cs" />
