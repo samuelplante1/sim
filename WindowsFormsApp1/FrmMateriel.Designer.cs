@@ -133,7 +133,7 @@
             // 
             // btnEnvoi
             // 
-            this.btnEnvoi.Location = new System.Drawing.Point(654, 387);
+            this.btnEnvoi.Location = new System.Drawing.Point(325, 347);
             this.btnEnvoi.Name = "btnEnvoi";
             this.btnEnvoi.Size = new System.Drawing.Size(75, 23);
             this.btnEnvoi.TabIndex = 11;
@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(453, 418);
             this.Controls.Add(this.nUDMateriel15);
             this.Controls.Add(this.nUDMateriel14);
             this.Controls.Add(this.cboMateriel5);

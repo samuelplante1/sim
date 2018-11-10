@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
                 cboParticipant.Items.Add(participant.Nom);
             }
             PopulerChampsMatériel();
+            PopulerChampsGroupes();
             btnEnvoi.Enabled = false;
         }
 
@@ -38,14 +39,23 @@ namespace WindowsFormsApp1
             }
             read.Close();
         }
-
+        private void PopulerChampsGroupes()
+        {
+            sql msql = new sql("SELECT * FROM Participant ORDER BY 6", "A18_Sim_Eq07");
+            SqlDataReader read = msql.execute();
+            while (read.Read())
+            {
+                cboParticipant.Items.Add(read["nomGroupe"]);
+            }
+            read.Close();
+        }
         private void cboMateriel1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboMateriel1.SelectedIndex != -1 ||
                 cboMateriel2.SelectedIndex != -1 ||
                 cboMateriel3.SelectedIndex != -1 ||
                 cboMateriel4.SelectedIndex != -1 ||
-                cboMateriel5.SelectedIndex != -1 )
+                cboMateriel5.SelectedIndex != -1)
             {
                 btnEnvoi.Enabled = true;
             }
