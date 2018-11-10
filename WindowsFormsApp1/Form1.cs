@@ -26,6 +26,7 @@ namespace WindowsFormsApp1
             PopulerChampsCegeps();
             PopulerChampsGroupes();
             PopulerChampsCategories();
+            ChargerPersonnes();
         }
         List<Cegep> listCegep;
 
@@ -65,26 +66,31 @@ namespace WindowsFormsApp1
             read.Close();
         }
 
-        //private void ChargerPersonnes()
-        //{
-        //    sql msql = new sql("SELECT * FROM Personne ORDER BY 2, 3", "A18_Sim_Eq07");
-        //    SqlDataReader read = msql.execute();
-        //    while (read.Read())
-        //    {
-        //        m_listPersonnes.Add(new Personne(read["nomCegep"]));
-        //    }
-        //    read.Close();
-        //}
+        private void ChargerPersonnes()
+        {
+            sql msql = new sql("SELECT * FROM Personne ORDER BY 1", "A18_Sim_Eq07");
+            SqlDataReader read = msql.execute();
+            while (read.Read())
+            {
+                m_listPersonnes.Add(new Personne(read["Nom"].ToString(), read["Prenom"].ToString(), read["Couriel"].ToString()));
+            }
+            read.Close();
+        }
 
         private void btnInscrire_Click(object sender, EventArgs e)
         {
             if(txtNom.Text != "" && txtPrenom.Text != "" && txtCourriel.Text != "" && cmbCategorie.SelectedIndex != -1 && cmbCegep.SelectedIndex != -1)
             {
+                foreach (Personne personne in m_listPersonnes)
+                {
+                    if (personne.Nom == txtNom.Text && personne.Prenom == txtPrenom.Text)
+                        return;
+                }
                 sql insertionPersonneSQL = new sql("INSERT INTO [dbo].[Personne] VALUES ('" +  txtPrenom.Text + "', '" + txtNom.Text +  "', '" + txtCourriel.Text + "', " + "123123" + ")", "A18_Sim_Eq07");
                 insertionPersonneSQL.executeNonQuery();
 
-                sql insertioInscriptionnSQL = new sql("INSERT INTO [dbo].[Inscription] VALUES ()", "A18_Sim_Eq07");
-                insertioInscriptionnSQL.executeNonQuery();
+                //sql insertioInscriptionnSQL = new sql("INSERT INTO [dbo].[Inscription] VALUES ()", "A18_Sim_Eq07");
+                //insertioInscriptionnSQL.executeNonQuery();
 
 
                 // Ajouter à la liste locale
@@ -105,7 +111,9 @@ namespace WindowsFormsApp1
                     m_listParticipant.Add(m_objParticipant);
                     m_objParticipant.Ajouter(m_objPersonne);
                 }
+                MessageBox.Show("Vous avez bien étés enrigistrés");
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
