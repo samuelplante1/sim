@@ -42,6 +42,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cmbCategorie = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -124,9 +126,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(297, 107);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(250, 13);
+            this.label5.Size = new System.Drawing.Size(286, 13);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Si vous faites partie d\'un groupe, indiquer le numero";
+            this.label5.Text = "Si vous faites partie d\'un groupe, indiquer le nom du groupe";
             // 
             // cmbExistant
             // 
@@ -148,7 +150,7 @@
             // cmbCategorie
             // 
             this.cmbCategorie.FormattingEnabled = true;
-            this.cmbCategorie.Location = new System.Drawing.Point(300, 172);
+            this.cmbCategorie.Location = new System.Drawing.Point(300, 204);
             this.cmbCategorie.Name = "cmbCategorie";
             this.cmbCategorie.Size = new System.Drawing.Size(247, 21);
             this.cmbCategorie.TabIndex = 12;
@@ -156,17 +158,35 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(297, 156);
+            this.label6.Location = new System.Drawing.Point(297, 188);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 13;
             this.label6.Text = "Catégorie";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(300, 165);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(247, 20);
+            this.textBox2.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(297, 148);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Nom du Groupe";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 323);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbCategorie);
             this.Controls.Add(this.button1);
@@ -204,6 +224,9 @@
         private System.Windows.Forms.Label label6;
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label7;
     }
 }
 

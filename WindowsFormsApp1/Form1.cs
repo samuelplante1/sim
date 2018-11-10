@@ -15,6 +15,14 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            PopulerChampsCegeps();
+        }
+        List<Cegep> listCegep;
+
+
+        private void PopulerChampsCegeps()
+        {
+            throw new NotImplementedException();
         }
     }
 }
