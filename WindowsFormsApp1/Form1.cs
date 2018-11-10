@@ -15,11 +15,11 @@ namespace WindowsFormsApp1
         private Personne m_objPersonne;
         private Participant m_objParticipant;
         private Cegep m_objCegep;
-        private List<Participant> m_listParticipant;
+        private List<Participant> m_listParticipant = new List<Participant>();
         public Form1()
         {
             InitializeComponent();
-            PopulerChampsCegeps();
+            //PopulerChampsCegeps();
         }
         List<Cegep> listCegep;
 
@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
         private void btnInscrire_Click(object sender, EventArgs e)
         {
             m_objPersonne = new Personne(txtNom.Text, txtPrenom.Text, txtCourriel.Text);
-            if (cmbExistant.SelectedIndex == -1)
+            if (cmbExistant.SelectedIndex != -1)
             {
                 foreach (Participant participant in m_listParticipant)
                 {

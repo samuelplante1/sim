@@ -8,8 +8,10 @@ namespace WindowsFormsApp1
 {
     public class Participant
     {
+        
         #region CHAMPS ET PROPRIÉTÉS
         private string m_nom;
+        private List<Personne> m_colPersonnes;
         /// <summary>
         /// Le nom de l'individuel ou du groupe qui participe au concours
         /// </summary>
@@ -25,7 +27,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private List<Personne> m_colPersonnes;
         /// <summary>
         /// Liste de personne dans le participants
         /// </summary>
