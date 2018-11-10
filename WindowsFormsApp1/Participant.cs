@@ -44,6 +44,15 @@ namespace WindowsFormsApp1
             Nom = pNom;
             m_colPersonnes = new List<Personne>();
         }
-    #endregion
+        #endregion
+        #region Méthodes
+        /// <summary>
+        /// Ajoute une nouvelle personne à la liste
+        /// </summary>
+        public void Ajouter(Personne pPersonne)
+        {
+            m_colPersonnes.Add(pPersonne);
+        }
+        #endregion
     }
 }
