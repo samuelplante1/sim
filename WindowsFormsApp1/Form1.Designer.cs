@@ -35,15 +35,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblNom = new System.Windows.Forms.Label();
+            this.lblPrenom = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbExistant = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cmbCategorie = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblCat = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblNomDuGroupe = new System.Windows.Forms.Label();
+            this.lblCourriel = new System.Windows.Forms.Label();
+            this.txtCourriel = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -103,23 +105,23 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Date de l\'événement";
             // 
-            // label3
+            // lblNom
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Nom";
+            this.lblNom.AutoSize = true;
+            this.lblNom.Location = new System.Drawing.Point(74, 107);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(29, 13);
+            this.lblNom.TabIndex = 7;
+            this.lblNom.Text = "Nom";
             // 
-            // label4
+            // lblPrenom
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(180, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Prenom";
+            this.lblPrenom.AutoSize = true;
+            this.lblPrenom.Location = new System.Drawing.Point(180, 107);
+            this.lblPrenom.Name = "lblPrenom";
+            this.lblPrenom.Size = new System.Drawing.Size(43, 13);
+            this.lblPrenom.TabIndex = 8;
+            this.lblPrenom.Text = "Prenom";
             // 
             // label5
             // 
@@ -155,14 +157,14 @@
             this.cmbCategorie.Size = new System.Drawing.Size(247, 21);
             this.cmbCategorie.TabIndex = 12;
             // 
-            // label6
+            // lblCat
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(297, 188);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Catégorie";
+            this.lblCat.AutoSize = true;
+            this.lblCat.Location = new System.Drawing.Point(297, 188);
+            this.lblCat.Name = "lblCat";
+            this.lblCat.Size = new System.Drawing.Size(52, 13);
+            this.lblCat.TabIndex = 13;
+            this.lblCat.Text = "Catégorie";
             // 
             // textBox2
             // 
@@ -171,29 +173,47 @@
             this.textBox2.Size = new System.Drawing.Size(247, 20);
             this.textBox2.TabIndex = 14;
             // 
-            // label7
+            // lblNomDuGroupe
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(297, 148);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Nom du Groupe";
+            this.lblNomDuGroupe.AutoSize = true;
+            this.lblNomDuGroupe.Location = new System.Drawing.Point(297, 148);
+            this.lblNomDuGroupe.Name = "lblNomDuGroupe";
+            this.lblNomDuGroupe.Size = new System.Drawing.Size(82, 13);
+            this.lblNomDuGroupe.TabIndex = 15;
+            this.lblNomDuGroupe.Text = "Nom du Groupe";
+            // 
+            // lblCourriel
+            // 
+            this.lblCourriel.AutoSize = true;
+            this.lblCourriel.Location = new System.Drawing.Point(74, 147);
+            this.lblCourriel.Name = "lblCourriel";
+            this.lblCourriel.Size = new System.Drawing.Size(42, 13);
+            this.lblCourriel.TabIndex = 17;
+            this.lblCourriel.Text = "Courriel";
+            // 
+            // txtCourriel
+            // 
+            this.txtCourriel.Location = new System.Drawing.Point(77, 163);
+            this.txtCourriel.Name = "txtCourriel";
+            this.txtCourriel.Size = new System.Drawing.Size(206, 20);
+            this.txtCourriel.TabIndex = 18;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 323);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtCourriel);
+            this.Controls.Add(this.lblCourriel);
+            this.Controls.Add(this.lblNomDuGroupe);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblCat);
             this.Controls.Add(this.cmbCategorie);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbExistant);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblPrenom);
+            this.Controls.Add(this.lblNom);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label1);
@@ -215,18 +235,20 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblNom;
+        private System.Windows.Forms.Label lblPrenom;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbExistant;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cmbCategorie;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblCat;
 
         #endregion
 
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblNomDuGroupe;
+        private System.Windows.Forms.Label lblCourriel;
+        private System.Windows.Forms.TextBox txtCourriel;
     }
 }
 

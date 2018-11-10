@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        private Personne m_objPersonne;
         public Form1()
         {
             InitializeComponent();
