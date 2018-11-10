@@ -18,8 +18,9 @@ namespace WindowsFormsApp1
             {
                 cboParticipant.Items.Add(participant.Nom);
             }
+            InitializeComponent();
         }
 
-
+ 
     }
 }
