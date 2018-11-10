@@ -107,8 +107,33 @@ namespace WindowsFormsApp1
         }
         private void btnEnvoi_Click(object sender, EventArgs e)
         {
+            if (cboMateriel1.SelectedIndex != -1)
+            {
+                sql msql = new sql("INSERT INTO dbo.Numero_Materiel VALUES (" + (cboParticipant.SelectedIndex + 1) + "," + (cboMateriel1.SelectedIndex + 1) + "," + nUDMateriel1.Value.ToString() + ")", "A18_Sim_Eq07");
+                msql.executeNonQuery();
+            }
+            if (cboMateriel2.SelectedIndex != -1)
+            {
+                sql msql = new sql("INSERT INTO dbo.Numero_Materiel VALUES (" + (cboParticipant.SelectedIndex + 1) + "," + (cboMateriel2.SelectedIndex + 1) + "," + nUDMateriel12.Value.ToString() + ")", "A18_Sim_Eq07");
+                msql.executeNonQuery();
+            }
+            if (cboMateriel3.SelectedIndex != -1)
+            {
+                sql msql = new sql("INSERT INTO dbo.Numero_Materiel VALUES (" + (cboParticipant.SelectedIndex + 1) + "," + (cboMateriel3.SelectedIndex + 1) + "," + nUDMateriel13.Value.ToString() + ")", "A18_Sim_Eq07");
+                msql.executeNonQuery();
+            }
+            if (cboMateriel4.SelectedIndex != -1)
+            {
+                sql msql = new sql("INSERT INTO dbo.Numero_Materiel VALUES (" + (cboParticipant.SelectedIndex + 1) + "," + (cboMateriel4.SelectedIndex + 1) + "," + nUDMateriel14.Value.ToString() + ")", "A18_Sim_Eq07");
+                msql.executeNonQuery();
+            }
+            if (cboMateriel5.SelectedIndex != -1)
+            {
+                sql msql = new sql("INSERT INTO dbo.Numero_Materiel VALUES (" + (cboParticipant.SelectedIndex + 1) + "," + (cboMateriel5.SelectedIndex + 1) + "," + nUDMateriel15.Value.ToString() + ")", "A18_Sim_Eq07");
+                msql.executeNonQuery();
+            }
 
-            sql msql = new sql("INSERT INTO dbo.NumeroMateriel VALUES (" + (cboParticipant.SelectedIndex + 1) + "," + (cboMateriel1.SelectedIndex + 1) + "," + nUDMateriel1.Value, "A18_Sim_Eq07");
+            MessageBox.Show("Envoyé!");
         }
 
 
