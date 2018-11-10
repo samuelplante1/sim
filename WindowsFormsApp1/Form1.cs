@@ -53,5 +53,11 @@ namespace WindowsFormsApp1
                 m_objParticipant.Ajouter(m_objPersonne);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmMateriel frm = new FrmMateriel(m_listParticipant);
+            frm.Show();
+        }
     }
 }

@@ -46,6 +46,7 @@
             this.lblNomDuGroupe = new System.Windows.Forms.Label();
             this.lblCourriel = new System.Windows.Forms.Label();
             this.txtCourriel = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -199,11 +200,22 @@
             this.txtCourriel.Size = new System.Drawing.Size(206, 20);
             this.txtCourriel.TabIndex = 18;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(422, 252);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 40);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Modifier materiel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 323);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtCourriel);
             this.Controls.Add(this.lblCourriel);
             this.Controls.Add(this.lblNomDuGroupe);
@@ -250,6 +262,7 @@
         private System.Windows.Forms.Label lblNomDuGroupe;
         private System.Windows.Forms.Label lblCourriel;
         private System.Windows.Forms.TextBox txtCourriel;
+        private System.Windows.Forms.Button button1;
     }
 }
 
