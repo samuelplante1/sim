@@ -42,7 +42,7 @@
             this.btnInscrire = new System.Windows.Forms.Button();
             this.cmbCategorie = new System.Windows.Forms.ComboBox();
             this.lblCat = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGroupe = new System.Windows.Forms.TextBox();
             this.lblNomDuGroupe = new System.Windows.Forms.Label();
             this.lblCourriel = new System.Windows.Forms.Label();
             this.txtCourriel = new System.Windows.Forms.TextBox();
@@ -167,12 +167,12 @@
             this.lblCat.TabIndex = 13;
             this.lblCat.Text = "Catégorie";
             // 
-            // textBox2
+            // txtGroupe
             // 
-            this.textBox2.Location = new System.Drawing.Point(300, 165);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 20);
-            this.textBox2.TabIndex = 14;
+            this.txtGroupe.Location = new System.Drawing.Point(300, 165);
+            this.txtGroupe.Name = "txtGroupe";
+            this.txtGroupe.Size = new System.Drawing.Size(247, 20);
+            this.txtGroupe.TabIndex = 14;
             // 
             // lblNomDuGroupe
             // 
@@ -207,7 +207,7 @@
             this.Controls.Add(this.txtCourriel);
             this.Controls.Add(this.lblCourriel);
             this.Controls.Add(this.lblNomDuGroupe);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtGroupe);
             this.Controls.Add(this.lblCat);
             this.Controls.Add(this.cmbCategorie);
             this.Controls.Add(this.btnInscrire);
@@ -246,7 +246,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGroupe;
         private System.Windows.Forms.Label lblNomDuGroupe;
         private System.Windows.Forms.Label lblCourriel;
         private System.Windows.Forms.TextBox txtCourriel;
