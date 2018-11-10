@@ -40,6 +40,8 @@ namespace WindowsFormsApp1
 
         private void PopulerChampsGroupes()
         {
+            cmbGroupesExistants.Items.Add("Aucun");
+            cmbGroupesExistants.SelectedIndex = 0;
             sql msql = new sql("SELECT * FROM Participant ORDER BY 6", "A18_Sim_Eq07");
             SqlDataReader read = msql.execute();
             while (read.Read())
@@ -86,7 +88,7 @@ namespace WindowsFormsApp1
 
         private void cmbGroupesExistants_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbGroupesExistants.SelectedIndex != -1)
+            if(cmbGroupesExistants.SelectedIndex > 0)
             {
                 txtGroupe.Text = "";
                 txtGroupe.Enabled = false;
