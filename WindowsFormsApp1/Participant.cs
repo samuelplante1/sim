@@ -10,7 +10,10 @@ namespace WindowsFormsApp1
     {
         #region CHAMPS ET PROPRIÉTÉS
         private string m_nom;
-        public string nom
+        /// <summary>
+        /// Le nom de l'individuel ou du groupe qui participe au concours
+        /// </summary>
+        public string Nom
         {
             get
             {
@@ -23,6 +26,9 @@ namespace WindowsFormsApp1
         }
 
         private List<Personne> m_colPersonnes;
+        /// <summary>
+        /// Liste de personne dans le participants
+        /// </summary>
         public List<Personne> ColPersonnes
         {
             get
@@ -35,7 +41,7 @@ namespace WindowsFormsApp1
     #region CONSTRUCTEURS
         public Participant(string pNom)
         {
-            nom = pNom;
+            Nom = pNom;
             m_colPersonnes = new List<Personne>();
         }
     #endregion

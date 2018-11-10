@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
         /// <summary>
         /// Le nom de famille de la personne
         /// </summary>
-        public string nom
+        public string Nom
         {
             get
             {
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         /// <summary>
         /// Le prénom de la personne
         /// </summary>
-        public string prenom
+        public string Prenom
         {
             get
             {
@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
         /// <summary>
         /// Le courriel de la personne
         /// </summary>
-        public string courriel
+        public string Courriel
         {
             get
             {
@@ -70,9 +70,9 @@ namespace WindowsFormsApp1
         #region CONSTRUCTEUR
         public Personne(string pNom, string pPrenom, string pCourriel)
         {
-            nom = pNom;
-            prenom = pPrenom;
-            courriel = pCourriel;
+            Nom = pNom;
+            Prenom = pPrenom;
+            Courriel = pCourriel;
         }
         #endregion
     }
