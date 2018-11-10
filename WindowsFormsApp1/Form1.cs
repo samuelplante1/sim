@@ -21,6 +21,8 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             PopulerChampsCegeps();
+            PopulerChampsGroupes();
+            PopulerChampsCategories();
         }
         List<Cegep> listCegep;
 
@@ -36,10 +38,34 @@ namespace WindowsFormsApp1
             read.Close();
         }
 
+        private void PopulerChampsGroupes()
+        {
+            cmbGroupesExistants.Items.Add("Aucun");
+            cmbGroupesExistants.SelectedIndex = 0;
+            sql msql = new sql("SELECT * FROM Participant ORDER BY 6", "A18_Sim_Eq07");
+            SqlDataReader read = msql.execute();
+            while (read.Read())
+            {
+                cmbGroupesExistants.Items.Add(read["nomGroupe"]);
+            }
+            read.Close();
+        }
+
+        private void PopulerChampsCategories()
+        {
+            sql msql = new sql("SELECT * FROM Categorie ORDER BY 2", "A18_Sim_Eq07");
+            SqlDataReader read = msql.execute();
+            while (read.Read())
+            {
+                cmbCategorie.Items.Add(read["NomCategorie"]);
+            }
+            read.Close();
+        }
+
         private void btnInscrire_Click(object sender, EventArgs e)
         {
             m_objPersonne = new Personne(txtNom.Text, txtPrenom.Text, txtCourriel.Text);
-            if (cmbExistant.SelectedIndex != -1)
+            if (cmbGroupesExistants.SelectedIndex != -1)
             {
                 foreach (Participant participant in m_listParticipant)
                 {
@@ -58,6 +84,19 @@ namespace WindowsFormsApp1
         {
             FrmMateriel frm = new FrmMateriel(m_listParticipant);
             frm.Show();
+        }
+
+        private void cmbGroupesExistants_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbGroupesExistants.SelectedIndex > 0)
+            {
+                txtGroupe.Text = "";
+                txtGroupe.Enabled = false;
+            }
+            else
+            {
+                txtGroupe.Enabled = true;
+            }
         }
     }
 }

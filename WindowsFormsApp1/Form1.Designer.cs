@@ -38,7 +38,7 @@
             this.lblNom = new System.Windows.Forms.Label();
             this.lblPrenom = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmbExistant = new System.Windows.Forms.ComboBox();
+            this.cmbGroupesExistants = new System.Windows.Forms.ComboBox();
             this.btnInscrire = new System.Windows.Forms.Button();
             this.cmbCategorie = new System.Windows.Forms.ComboBox();
             this.lblCat = new System.Windows.Forms.Label();
@@ -133,13 +133,14 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Si vous faites partie d\'un groupe, indiquer le nom du groupe";
             // 
-            // cmbExistant
+            // cmbGroupesExistants
             // 
-            this.cmbExistant.FormattingEnabled = true;
-            this.cmbExistant.Location = new System.Drawing.Point(300, 124);
-            this.cmbExistant.Name = "cmbExistant";
-            this.cmbExistant.Size = new System.Drawing.Size(247, 21);
-            this.cmbExistant.TabIndex = 10;
+            this.cmbGroupesExistants.FormattingEnabled = true;
+            this.cmbGroupesExistants.Location = new System.Drawing.Point(300, 124);
+            this.cmbGroupesExistants.Name = "cmbGroupesExistants";
+            this.cmbGroupesExistants.Size = new System.Drawing.Size(247, 21);
+            this.cmbGroupesExistants.TabIndex = 10;
+            this.cmbGroupesExistants.SelectedIndexChanged += new System.EventHandler(this.cmbGroupesExistants_SelectedIndexChanged);
             // 
             // btnInscrire
             // 
@@ -223,7 +224,7 @@
             this.Controls.Add(this.lblCat);
             this.Controls.Add(this.cmbCategorie);
             this.Controls.Add(this.btnInscrire);
-            this.Controls.Add(this.cmbExistant);
+            this.Controls.Add(this.cmbGroupesExistants);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblPrenom);
             this.Controls.Add(this.lblNom);
@@ -251,7 +252,7 @@
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblPrenom;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbExistant;
+        private System.Windows.Forms.ComboBox cmbGroupesExistants;
         private System.Windows.Forms.Button btnInscrire;
         private System.Windows.Forms.ComboBox cmbCategorie;
         private System.Windows.Forms.Label lblCat;
