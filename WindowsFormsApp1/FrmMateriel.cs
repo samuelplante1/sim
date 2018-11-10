@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
                 cboMateriel2.SelectedIndex != -1 ||
                 cboMateriel3.SelectedIndex != -1 ||
                 cboMateriel4.SelectedIndex != -1 ||
-                cboMateriel5.SelectedIndex != -1 ||)
+                cboMateriel5.SelectedIndex != -1 )
             {
                 btnEnvoi.Enabled = true;
             }
