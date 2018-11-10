@@ -12,9 +12,12 @@ namespace WindowsFormsApp1
 {
     public partial class FrmMateriel : Form
     {
-        public FrmMateriel()
+        public FrmMateriel(List<Participant> participants)
         {
-            InitializeComponent();
+            foreach(Participant participant in participants)
+            {
+                cboParticipant.Items.Add(participant.Nom);
+            }
         }
 
 
