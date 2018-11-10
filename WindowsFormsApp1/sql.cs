@@ -21,6 +21,11 @@ namespace WindowsFormsApp1
         public SqlDataReader execute() {
             return command.ExecuteReader();
         }
+        public void executeNonQuery()
+        {
+            command.ExecuteNonQuery();
+            this.close();
+        }
         public void close() {
             sqlcon.Close();
         }
