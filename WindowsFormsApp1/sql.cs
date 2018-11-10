@@ -9,18 +9,20 @@ namespace WindowsFormsApp1
 {
     public class sql
     {
-        public SqlDataReader SQL(string commande, string use) {
-            SqlConnection sqlcon = connectToDB(use);
-            SqlCommand command = sqlcon.CreateCommand();
+        SqlConnection sqlcon;
+        SqlCommand command;
+        public sql(string commande, string use)
+        {
+            sqlcon = new SqlConnection("Data Source=ed4sql2.laboratoire.collegeem.qc.ca; Initial Catalog=" + use + "; User ID=Sim07_User; Pwd=Sim07_=2=3User:2018");
+            sqlcon.Open();
+            command = sqlcon.CreateCommand();
             command.CommandText = commande;
+        }
+        public SqlDataReader execute() {
             return command.ExecuteReader();
         }
-
-        public SqlConnection connectToDB(string use)
-        {
-            SqlConnection sqlcon = new SqlConnection("Data Source = ed4sql2; Initial Catalog = " + use + "; Integrated Security = True");
-            sqlcon.Open();
-            return sqlcon;
+        public void close() {
+            sqlcon.Close();
         }
     }
 }

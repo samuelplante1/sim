@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,14 +20,20 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            //PopulerChampsCegeps();
+            PopulerChampsCegeps();
         }
         List<Cegep> listCegep;
 
 
         private void PopulerChampsCegeps()
         {
-            throw new NotImplementedException();
+            sql msql = new sql("SELECT * FROM Cegep ORDER BY 3", "A18_Sim_Eq07");
+            SqlDataReader read = msql.execute();
+            while (read.Read())
+            {
+                cmbCegep.Items.Add(read["nomCegep"]);
+            }
+            read.Close();
         }
 
         private void btnInscrire_Click(object sender, EventArgs e)
@@ -45,6 +52,12 @@ namespace WindowsFormsApp1
                 m_listParticipant.Add(m_objParticipant);
                 m_objParticipant.Ajouter(m_objPersonne);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmMateriel frm = new FrmMateriel(m_listParticipant);
+            frm.Show();
         }
     }
 }
