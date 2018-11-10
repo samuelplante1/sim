@@ -11,6 +11,9 @@ namespace WindowsFormsApp1
     {
         #region CHAMPS ET PROPRIÉTÉS
         private string m_nom;
+        /// <summary>
+        /// Le nom de famille de la personne
+        /// </summary>
         public string nom
         {
             get
@@ -25,7 +28,9 @@ namespace WindowsFormsApp1
         }
 
         private string m_prenom;
-
+        /// <summary>
+        /// Le prénom de la personne
+        /// </summary>
         public string prenom
         {
             get
@@ -39,7 +44,9 @@ namespace WindowsFormsApp1
         }
 
         private string m_courriel;
-
+        /// <summary>
+        /// Le courriel de la personne
+        /// </summary>
         public string courriel
         {
             get
@@ -48,7 +55,15 @@ namespace WindowsFormsApp1
             }
             set
             {
-                m_courriel = value;
+                if (value.Contains('@'))
+                {
+                    m_courriel = value;
+                }
+                else
+                {
+                    throw new ArgumentException();
+                }
+                
             }
         }
         #endregion
