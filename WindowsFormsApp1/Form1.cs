@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         private Personne m_objPersonne;
+        private Cegep m_objCegep;
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +25,11 @@ namespace WindowsFormsApp1
         private void PopulerChampsCegeps()
         {
             throw new NotImplementedException();
+        }
+
+        private void btnInscrire_Click(object sender, EventArgs e)
+        {
+            m_objPersonne = new Personne(txtNom.Text, txtPrenom.Text, txtCourriel.Text);
         }
     }
 }
