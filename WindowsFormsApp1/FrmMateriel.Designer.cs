@@ -108,6 +108,7 @@
             this.cboMateriel2.Name = "cboMateriel2";
             this.cboMateriel2.Size = new System.Drawing.Size(204, 21);
             this.cboMateriel2.TabIndex = 7;
+            this.cboMateriel2.SelectedIndexChanged += new System.EventHandler(this.cboMateriel2_SelectedIndexChanged);
             // 
             // cboMateriel3
             // 
@@ -139,6 +140,7 @@
             this.btnEnvoi.TabIndex = 11;
             this.btnEnvoi.Text = "Envoyé";
             this.btnEnvoi.UseVisualStyleBackColor = true;
+            this.btnEnvoi.Click += new System.EventHandler(this.btnEnvoi_Click);
             // 
             // cboMateriel4
             // 

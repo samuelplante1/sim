@@ -51,11 +51,8 @@ namespace WindowsFormsApp1
         }
         private void cboMateriel1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboMateriel1.SelectedIndex != -1 ||
-                cboMateriel2.SelectedIndex != -1 ||
-                cboMateriel3.SelectedIndex != -1 ||
-                cboMateriel4.SelectedIndex != -1 ||
-                cboMateriel5.SelectedIndex != -1)
+            if (cboMateriel1.SelectedIndex != -1)
+           
             {
                 btnEnvoi.Enabled = true;
             }
@@ -64,5 +61,56 @@ namespace WindowsFormsApp1
                 btnEnvoi.Enabled = false;
             }
         }
+        private void cboMateriel2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cboMateriel2.SelectedIndex != -1)
+            {
+                btnEnvoi.Enabled = true;
+            }
+            else
+            {
+                btnEnvoi.Enabled = false;
+            }
+        }
+        private void cboMateriel3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboMateriel3.SelectedIndex != -1)
+            {
+                btnEnvoi.Enabled = true;
+            }
+            else
+            {
+                btnEnvoi.Enabled = false;
+            }
+        }
+        private void cboMateriel4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboMateriel4.SelectedIndex != -1)
+            {
+                btnEnvoi.Enabled = true;
+            }
+            else
+            {
+                btnEnvoi.Enabled = false;
+            }
+        }
+        private void cboMateriel5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboMateriel5.SelectedIndex != -1)
+            {
+                btnEnvoi.Enabled = true;
+            }
+            else
+            {
+                btnEnvoi.Enabled = false;
+            }
+        }
+        private void btnEnvoi_Click(object sender, EventArgs e)
+        {
+
+            sql msql = new sql("INSERT INTO dbo.NumeroMateriel VALUES (" + (cboParticipant.SelectedIndex + 1) + "," + (cboMateriel1.SelectedIndex + 1) + "," + nUDMateriel1.Value, "A18_Sim_Eq07");
+        }
+
+
     }
 }
