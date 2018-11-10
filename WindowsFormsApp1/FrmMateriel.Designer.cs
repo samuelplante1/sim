@@ -63,9 +63,9 @@
             this.lblNomParticipant.AutoSize = true;
             this.lblNomParticipant.Location = new System.Drawing.Point(59, 22);
             this.lblNomParticipant.Name = "lblNomParticipant";
-            this.lblNomParticipant.Size = new System.Drawing.Size(44, 13);
+            this.lblNomParticipant.Size = new System.Drawing.Size(57, 13);
             this.lblNomParticipant.TabIndex = 1;
-            this.lblNomParticipant.Text = "Numéro";
+            this.lblNomParticipant.Text = "Participant";
             // 
             // lblMétériel
             // 
